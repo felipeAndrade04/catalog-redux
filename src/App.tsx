@@ -1,15 +1,16 @@
 import { Provider } from "react-redux";
+import { ChakraProvider } from "@chakra-ui/react"
 
 import store from "./store";
 
-import Catalog from "./components/Catalog";
-import Cart from "./components/Cart";
+import Main from "./pages/Main";
 
 function App() {
   return (
     <Provider store={store}>
-      <Catalog />
-      <Cart />
+      <ChakraProvider>
+        <Main />
+      </ChakraProvider>
     </Provider>
   );
 }
